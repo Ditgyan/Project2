@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aether - Premium Wireless Audio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d0d;
+            /* Dark background for premium feel */
+            color: #f3f4f6;
+        }
+
+        /* Utility class for scroll-reveal animation */
+        .reveal-item {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .reveal-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Subtle gradient for buttons */
+        .cta-button {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            background-image: linear-gradient(to right, #4c51bf, #6b46c1);
+            /* Indigo to Violet */
+        }
+
+        .cta-button:hover {
+            box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-black/80 backdrop-blur-md shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="text-2xl font-extrabold tracking-widest text-indigo-400">AETHER</a>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#hero" class="hover:text-indigo-400 transition">Home</a>
+                <a href="#features" class="hover:text-indigo-400 transition">Features</a>
+                <a href="#products" class="hover:text-indigo-400 transition">Products</a>
+                <a href="#contact" class="cta-button px-4 py-1 rounded-full text-sm font-semibold text-white">Buy
+                    Now</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7">
+                    </path>
+                </svg>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden bg-black/90 pb-4">
+            <a href="#hero" class="block py-2 px-6 hover:bg-gray-800 transition">Home</a>
+            <a href="#features" class="block py-2 px-6 hover:bg-gray-800 transition">Features</a>
+            <a href="#products" class="block py-2 px-6 hover:bg-gray-800 transition">Products</a>
+            <a href="#contact" class="block py-2 px-6 hover:bg-gray-800 transition text-indigo-400 font-semibold">Buy
+                Now</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="relative overflow-hidden pt-20 pb-28 md:pt-40 md:pb-56 bg-black">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center">
+                <!-- Text Content -->
+                <div class="md:w-1/2 mb-10 md:mb-0 text-center md:text-left reveal-item">
+                    <h1
+                        class="text-4xl sm:text-5xl lg:text-7xl font-extrabold leading-tight tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-500">
+                        Sound Redefined.
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-lg mx-auto md:mx-0">
+                        Experience the 'Aether A1' Wireless Headphones—where precision engineering meets unparalleled
+                        acoustic clarity.
+                    </p>
+                    <a href="#products"
+                        class="cta-button inline-block text-white font-bold py-3 px-8 rounded-full shadow-lg">
+                        Explore The A1 Series
+                    </a>
+                </div>
+
+                <!-- Image Placeholder (High-impact visual) -->
+                <div class="md:w-1/2 flex justify-center reveal-item delay-200">
+                    <img src="AETHER.png" alt="Aether A1 Premium Wireless Headphones"
+                        class="w-full max-w-sm md:max-w-lg rounded-xl shadow-2xl transform hover:scale-[1.02] transition duration-500"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x450/4f46e5/ffffff?text=Product+Image+Unavailable'">
+                </div>
+            </div>
+
+            <!-- Background subtle pattern/animation -->
+            <div class="absolute inset-0 z-0 opacity-10 pointer-events-none">
+                <svg width="100%" height="100%">
+                    <defs>
+                        <pattern id="grid" width="80" height="80" patternUnits="userSpaceOnUse">
+                            <path d="M 80 0 L 0 0 0 80" fill="none" stroke="#374151" stroke-width="0.5" />
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#grid)" />
+                </svg>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-16 md:py-24 bg-gray-900">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12 reveal-item">Engineered for Excellence</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+                    <!-- Feature 1 -->
+                    <div class="p-6 bg-gray-800 rounded-xl shadow-xl reveal-item">
+                        <div class="text-indigo-400 mb-4 inline-block p-3 bg-indigo-900/50 rounded-full">
+                            <!-- Icon: Lightning -->
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">Instant-Sync™ Technology</h3>
+                        <p class="text-gray-400">Zero-latency connection perfect for gaming, video editing, and live
+                            audio monitoring. Never miss a beat.</p>
+                    </div>
+
+                    <!-- Feature 2 -->
+                    <div class="p-6 bg-gray-800 rounded-xl shadow-xl reveal-item delay-100">
+                        <div class="text-indigo-400 mb-4 inline-block p-3 bg-indigo-900/50 rounded-full">
+                            <!-- Icon: Battery -->
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">50-Hour Endurance</h3>
+                        <p class="text-gray-400">Industry-leading battery life, delivering 50 continuous hours of
+                            playback and a 10-minute quick charge feature.</p>
+                    </div>
+
+                    <!-- Feature 3 -->
+                    <div class="p-6 bg-gray-800 rounded-xl shadow-xl reveal-item delay-200">
+                        <div class="text-indigo-400 mb-4 inline-block p-3 bg-indigo-900/50 rounded-full">
+                            <!-- Icon: Shield -->
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944c-1.25.0-2.46.1-3.64.288L12 12l-5.64 8.768A11.955 11.955 0 0112 21.056c1.25.0 2.46-.1 3.64-.288L12 12l5.64-8.768z">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3">AdaptShield™ ANC</h3>
+                        <p class="text-gray-400">Advanced Active Noise Cancellation adapts in real-time to your
+                            environment for true audio immersion.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Product Showcase Section -->
+        <section id="products" class="py-16 md:py-24 bg-black">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 reveal-item">Our Product Ecosystem</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                    <!-- Product Card 1: Headphones (A1) -->
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-2xl text-center reveal-item">
+                        <img src="Aether A1.png" Aether A1 Headphones"
+                            class="w-full h-auto rounded-lg mb-4 object-cover">
+                        <h3 class="text-2xl font-semibold text-indigo-300">Aether A1</h3>
+                        <p class="text-gray-400 mb-4">Over-Ear Wireless ANC Headphones.</p>
+                        <span class="text-3xl font-bold text-white mb-4 block">$349</span>
+                        <a href="#"
+                            class="cta-button inline-block text-white font-medium py-2 px-6 rounded-full text-sm">
+                            Add to Cart
+                        </a>
+                    </div>
+
+                    <!-- Product Card 2: Earbuds (Evo) -->
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-2xl text-center reveal-item delay-100">
+                        <img src="Aether Evo.png" alt="Aether Evo Earbuds"
+                            class="w-full h-auto rounded-lg mb-4 object-cover">
+                        <h3 class="text-2xl font-semibold text-indigo-300">Aether Evo</h3>
+                        <p class="text-gray-400 mb-4">True Wireless In-Ear Earbuds.</p>
+                        <span class="text-3xl font-bold text-white mb-4 block">$199</span>
+                        <a href="#"
+                            class="cta-button inline-block text-white font-medium py-2 px-6 rounded-full text-sm">
+                            Add to Cart
+                        </a>
+                    </div>
+
+                    <!-- Product Card 3: Speaker (Pulse) -->
+                    <div class="bg-gray-900 p-6 rounded-xl shadow-2xl text-center reveal-item delay-200">
+                        <img src="Aether Pulse.png" alt="Aether Pulse Speaker"
+                            class="w-full h-auto rounded-lg mb-4 object-cover">
+                        <h3 class="text-2xl font-semibold text-indigo-300">Aether Pulse</h3>
+                        <p class="text-gray-400 mb-4">Portable Bluetooth Speaker.</p>
+                        <span class="text-3xl font-bold text-white mb-4 block">$249</span>
+                        <a href="#"
+                            class="cta-button inline-block text-white font-medium py-2 px-6 rounded-full text-sm">
+                            Add to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA Section -->
+        <section id="contact" class="py-16 md:py-24 bg-gray-800">
+            <div class="container mx-auto px-6 text-center reveal-item">
+                <h2 class="text-3xl md:text-5xl font-extrabold mb-4 text-indigo-300">Ready to Upgrade Your Audio?</h2>
+                <p class="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">Join the movement and hear what you've been
+                    missing. 30-day money-back guarantee.</p>
+                <a href="#"
+                    class="cta-button inline-block text-white font-bold py-4 px-12 rounded-full text-lg shadow-2xl">
+                    Order Today & Get Free Shipping
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8">
+        <div class="container mx-auto px-6 text-center text-gray-500 text-sm">
+            <p>&copy; <span id="current-year"></span> Aether Technologies. All rights reserved.</p>
+            <div class="mt-2 space-x-4">
+                <a href="#" class="hover:text-indigo-400 transition">Privacy Policy</a>
+                <a href="#" class="hover:text-indigo-400 transition">Terms of Service</a>
+                <a href="#" class="hover:text-indigo-400 transition">Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Functionality and Scroll Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Mobile Menu Toggle ---
+            const menuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                menuButton.querySelector('svg').classList.toggle('rotate-180');
+            });
+
+            // Close menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+
+            // --- Footer Year Update ---
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+
+            // --- Smooth CSS Animations on Scroll (using IntersectionObserver) ---
+            const observerOptions = {
+                root: null, // viewport
+                rootMargin: '0px',
+                threshold: 0.1 // Trigger when 10% of the item is visible
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Element is visible, add 'visible' class to trigger transition
+                        entry.target.classList.add('visible');
+                        // Stop observing once it's visible
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Find all elements marked for reveal and start observing
+            document.querySelectorAll('.reveal-item').forEach(item => {
+                observer.observe(item);
+            });
+        });
+    </script>
+</body>
+
+</html>
